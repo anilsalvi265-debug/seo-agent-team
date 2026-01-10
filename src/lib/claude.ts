@@ -12,20 +12,27 @@ export async function callAgent(
   userMessage: string,
   maxTokens: number = 4096
 ): Promise<string> {
-  const response = await anthropic.messages.create({
-    model: 'claude-sonnet-4-20250514',
-    max_tokens: maxTokens,
-    system: systemPrompt,
-    messages: [
-      {
-        role: 'user',
-        content: userMessage,
-      },
-    ],
-  });
+  try {
+    console.log('Calling Claude API...');
+    const response = await anthropic.messages.create({
+      model: 'claude-3-5-sonnet-20241022',
+      max_tokens: maxTokens,
+      system: systemPrompt,
+      messages: [
+        {
+          role: 'user',
+          content: userMessage,
+        },
+      ],
+    });
 
-  const textBlock = response.content.find((block) => block.type === 'text');
-  return textBlock ? textBlock.text : '';
+    const textBlock = response.content.find((block) => block.type === 'text');
+    console.log('Claude API response received');
+    return textBlock ? textBlock.text : '';
+  } catch (error) {
+    console.error('Claude API error:', error);
+    throw error;
+  }
 }
 
 export async function callAgentWithJSON<T>(
