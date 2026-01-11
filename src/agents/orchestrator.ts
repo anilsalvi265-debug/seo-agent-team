@@ -29,9 +29,9 @@ export async function runSEOAnalysis(
     url,
     includeContent = true,
     includeTechnical = true,
-    includeKeywords = true,
-    includeBacklinks = true,
-    includeCompetitors = true,
+    includeKeywords = false,
+    includeBacklinks = false,
+    includeCompetitors = false,
   } = request;
 
   const report = (stage: string, progress: number, message: string) => {
