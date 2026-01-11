@@ -53,13 +53,8 @@ export async function POST(request: NextRequest) {
 export async function GET() {
   return NextResponse.json({
     message: 'SEO Analysis API',
+    apiKeyExists: !!process.env.ANTHROPIC_API_KEY,
+    apiKeyPrefix: process.env.ANTHROPIC_API_KEY?.substring(0, 10) || 'NOT SET',
     usage: 'POST with { url: "https://example.com" }',
-    options: {
-      includeContent: 'boolean (default: true)',
-      includeTechnical: 'boolean (default: true)',
-      includeKeywords: 'boolean (default: true)',
-      includeBacklinks: 'boolean (default: true)',
-      includeCompetitors: 'boolean (default: true)',
-    },
   });
 }
