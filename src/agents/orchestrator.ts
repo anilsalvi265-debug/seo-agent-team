@@ -28,7 +28,7 @@ export async function runSEOAnalysis(
   const {
     url,
     includeContent = true,
-    includeTechnical = true,
+    includeTechnical = false,
     includeKeywords = false,
     includeBacklinks = false,
     includeCompetitors = false,
