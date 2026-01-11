@@ -45,6 +45,7 @@ export async function runSEOAnalysis(
 
   // Step 2: Run all analyses in parallel
   report('analyzing', 25, 'Starting AI agent analysis...');
+  console.log('Orchestrator: Starting agents, content:', includeContent, 'technical:', includeTechnical);
 
   // Run analyses with proper typing
   const [
@@ -61,6 +62,8 @@ export async function runSEOAnalysis(
     includeCompetitors ? analyzeCompetitors(pageData) : Promise.resolve(null),
   ]);
 
+  console.log('Orchestrator: Content result:', contentResult?.success, contentResult?.error);
+  console.log('Orchestrator: Technical result:', technicalResult?.success, technicalResult?.error);
   report('analyzing', 70, 'All agents completed analysis');
 
   // Step 3: Generate the final report

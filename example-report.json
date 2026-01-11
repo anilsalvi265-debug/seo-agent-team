@@ -1,0 +1,242 @@
+{
+  "id": "report-example",
+  "url": "https://example.com",
+  "timestamp": "2026-01-10T19:45:00.000Z",
+  "overallScore": 45,
+  "content": {
+    "title": {
+      "text": "Example Domain",
+      "length": 14,
+      "score": 40,
+      "suggestions": [
+        "Title is too short (14 chars). Aim for 50-60 characters for optimal SEO.",
+        "Include primary keywords in the title.",
+        "Consider adding a brand name or unique value proposition."
+      ]
+    },
+    "metaDescription": {
+      "text": "",
+      "length": 0,
+      "score": 0,
+      "suggestions": [
+        "CRITICAL: No meta description found. Add a compelling 150-160 character description.",
+        "Include primary keywords naturally in the meta description.",
+        "Write a description that encourages clicks from search results."
+      ]
+    },
+    "headings": {
+      "h1": ["Example Domain"],
+      "h2": [],
+      "h3": [],
+      "structure": "Only one H1 tag found. No H2 or H3 subheadings to organize content.",
+      "score": 50,
+      "suggestions": [
+        "Add H2 subheadings to break up content and improve readability.",
+        "Use H3 tags for subsections under H2 headings.",
+        "Include keywords in heading tags naturally."
+      ]
+    },
+    "content": {
+      "wordCount": 17,
+      "readabilityScore": 85,
+      "keywordDensity": {},
+      "suggestions": [
+        "CRITICAL: Content is extremely thin (17 words). Aim for at least 300+ words.",
+        "Add comprehensive, valuable content to rank well in search results.",
+        "Include relevant keywords throughout the content."
+      ]
+    },
+    "images": {
+      "total": 0,
+      "withAlt": 0,
+      "withoutAlt": 0,
+      "suggestions": [
+        "Consider adding relevant images to improve engagement.",
+        "Use descriptive alt text for all images for accessibility and SEO."
+      ]
+    }
+  },
+  "technical": {
+    "performance": {
+      "loadTime": 105,
+      "score": 95,
+      "suggestions": [
+        "Excellent load time! Page loads in 105ms."
+      ]
+    },
+    "mobile": {
+      "isMobileFriendly": true,
+      "viewportSet": true,
+      "score": 90,
+      "suggestions": [
+        "Viewport meta tag is properly configured."
+      ]
+    },
+    "security": {
+      "hasHttps": true,
+      "hasSecurityHeaders": false,
+      "score": 70,
+      "suggestions": [
+        "HTTPS is enabled - good!",
+        "Consider adding security headers (CSP, X-Frame-Options, etc.)"
+      ]
+    },
+    "crawlability": {
+      "robotsTxt": false,
+      "sitemap": false,
+      "canonicalUrl": null,
+      "score": 30,
+      "suggestions": [
+        "Add a canonical URL to prevent duplicate content issues.",
+        "Create a robots.txt file to guide search engine crawlers.",
+        "Add an XML sitemap to help search engines discover all pages."
+      ]
+    },
+    "schema": {
+      "hasStructuredData": false,
+      "types": [],
+      "suggestions": [
+        "Add JSON-LD structured data (Organization, WebPage, etc.)",
+        "Structured data helps search engines understand your content better.",
+        "Consider adding breadcrumb schema for better SERP appearance."
+      ]
+    },
+    "links": {
+      "internal": 0,
+      "external": 1,
+      "broken": [],
+      "suggestions": [
+        "Add internal links to help users and search engines navigate.",
+        "Internal linking distributes page authority throughout your site."
+      ]
+    }
+  },
+  "keywords": {
+    "primaryKeywords": [
+      {"keyword": "example domain", "volume": "low", "difficulty": "easy", "opportunity": "Brand term - easy to rank for"},
+      {"keyword": "domain example", "volume": "low", "difficulty": "easy", "opportunity": "Variation of primary keyword"}
+    ],
+    "secondaryKeywords": [
+      {"keyword": "sample website", "volume": "medium", "difficulty": "medium", "opportunity": "Related term"},
+      {"keyword": "test domain", "volume": "low", "difficulty": "easy", "opportunity": "Related term"}
+    ],
+    "longTailSuggestions": [
+      "how to use example domain for testing",
+      "what is example.com used for",
+      "example domain for developers"
+    ],
+    "contentGaps": [
+      "No educational content about domain usage",
+      "Missing FAQ section",
+      "No use case examples"
+    ],
+    "competitorKeywords": [
+      "placeholder website",
+      "test website",
+      "demo domain"
+    ]
+  },
+  "backlinks": {
+    "totalBacklinks": 0,
+    "uniqueDomains": 0,
+    "topReferrers": [],
+    "anchorTextDistribution": {
+      "branded": 40,
+      "exact match": 15,
+      "partial match": 25,
+      "generic": 15,
+      "url": 5
+    },
+    "linkBuildingOpportunities": [
+      "Create educational content about domain testing",
+      "Guest post on web development blogs",
+      "Submit to web development resource directories",
+      "Create a tool or resource worth linking to"
+    ],
+    "toxicLinks": []
+  },
+  "competitors": {
+    "competitors": [
+      {
+        "url": "httpbin.org",
+        "strengths": ["Developer-focused", "Interactive tools", "API documentation"],
+        "weaknesses": ["Complex interface", "Limited SEO content"],
+        "keywordsRanking": ["http testing", "api testing"]
+      },
+      {
+        "url": "placeholder.com",
+        "strengths": ["Clear purpose", "Good documentation"],
+        "weaknesses": ["Limited features"],
+        "keywordsRanking": ["placeholder images", "dummy images"]
+      }
+    ],
+    "gaps": [
+      "Competitors have richer content",
+      "Competitors offer interactive tools",
+      "Competitors have better documentation"
+    ],
+    "opportunities": [
+      "Create comprehensive documentation",
+      "Add interactive examples",
+      "Build developer tools"
+    ]
+  },
+  "recommendations": [
+    {
+      "priority": "high",
+      "category": "content",
+      "title": "Add Meta Description",
+      "description": "Your page is missing a meta description. Add a compelling 150-160 character description that includes your primary keywords and encourages users to click.",
+      "impact": "High impact on click-through rates from search results"
+    },
+    {
+      "priority": "high",
+      "category": "content",
+      "title": "Expand Page Content",
+      "description": "With only 17 words, your page has extremely thin content. Search engines prefer comprehensive content. Aim for at least 300-500 words of valuable, relevant content.",
+      "impact": "Critical for ranking - thin content rarely ranks well"
+    },
+    {
+      "priority": "high",
+      "category": "technical",
+      "title": "Add Canonical URL",
+      "description": "Add a canonical tag to specify the preferred version of this page and prevent duplicate content issues.",
+      "impact": "Prevents SEO dilution from duplicate content"
+    },
+    {
+      "priority": "medium",
+      "category": "content",
+      "title": "Improve Title Tag",
+      "description": "Your title is only 14 characters. Expand it to 50-60 characters with relevant keywords and a compelling message.",
+      "impact": "Better titles improve CTR and rankings"
+    },
+    {
+      "priority": "medium",
+      "category": "technical",
+      "title": "Add Structured Data",
+      "description": "Implement JSON-LD structured data (Organization, WebPage schema) to help search engines understand your content and potentially earn rich snippets.",
+      "impact": "Can improve visibility in search results"
+    },
+    {
+      "priority": "medium",
+      "category": "keywords",
+      "title": "Target Long-Tail Keywords",
+      "description": "Create content targeting long-tail keywords like 'how to use example domain for testing' to capture more specific search traffic.",
+      "impact": "Long-tail keywords often have higher conversion rates"
+    },
+    {
+      "priority": "low",
+      "category": "backlinks",
+      "title": "Build Quality Backlinks",
+      "description": "Develop a link building strategy: create linkable assets, guest post on relevant blogs, and submit to web directories.",
+      "impact": "Backlinks are a major ranking factor"
+    },
+    {
+      "priority": "low",
+      "category": "technical",
+      "title": "Add XML Sitemap",
+      "description": "Create and submit an XML sitemap to help search engines discover and index all your pages efficiently.",
+      "impact": "Improves crawl efficiency"
+    }
+  ]
+}

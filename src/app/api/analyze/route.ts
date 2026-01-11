@@ -2,10 +2,16 @@ import { NextRequest, NextResponse } from 'next/server';
 import { runSEOAnalysis } from '@/agents/orchestrator';
 import { SEOAnalysisRequest } from '@/types/seo';
 
+export const maxDuration = 60; // Allow up to 60 seconds for Vercel Pro
+
 export async function POST(request: NextRequest) {
   try {
+    console.log('API: Starting analysis...');
+    console.log('API: ANTHROPIC_API_KEY exists:', !!process.env.ANTHROPIC_API_KEY);
+
     const body = await request.json();
     const { url, ...options } = body as SEOAnalysisRequest;
+    console.log('API: Analyzing URL:', url);
 
     if (!url) {
       return NextResponse.json(
@@ -28,14 +34,15 @@ export async function POST(request: NextRequest) {
       url,
       includeContent: options.includeContent ?? true,
       includeTechnical: options.includeTechnical ?? true,
-      includeKeywords: options.includeKeywords ?? true,
-      includeBacklinks: options.includeBacklinks ?? true,
-      includeCompetitors: options.includeCompetitors ?? true,
+      includeKeywords: options.includeKeywords ?? false,
+      includeBacklinks: options.includeBacklinks ?? false,
+      includeCompetitors: options.includeCompetitors ?? false,
     });
 
+    console.log('API: Analysis complete, score:', report.overallScore);
     return NextResponse.json(report);
   } catch (error) {
-    console.error('Analysis error:', error);
+    console.error('API Analysis error:', error);
     return NextResponse.json(
       { error: `Analysis failed: ${error}` },
       { status: 500 }
